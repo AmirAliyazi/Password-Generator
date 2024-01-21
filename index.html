@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>password genarator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">Password Generator</h1>
+    <div class="container">
+
+        <div>
+            <form action="">
+                <input type="text" class="pass-gener-input" disabled>
+            </form>
+        </div>
+        <div class="pass-indicator" id="medium"></div>
+        <div class="pass-gener-btns">
+            <button class="pass-gener-copy btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 copy-icon svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5A3.375 3.375 0 006.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0015 2.25h-1.5a2.251 2.251 0 00-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 00-9-9z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 check-icon svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+
+
+                <span>Copy to Clipboard</span>
+            </button>
+            <button class="pass-gener-regenerate btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+
+                <span>Regenerate</span>
+            </button>
+        </div>
+        <div class="pass-gener-set">
+            <div class="pass-gener-char">
+                <label for="" class="char">
+                    <span>Characters : 11</span>
+                    <input type="range" min="1" max="30" value="11" class="input">
+                </label>
+            </div>
+            <div class="pass-setting">
+                <h2>Additional Options</h2>
+                <div class="pass-checkbox">
+                    <label for="en-upp">
+                        <input type="checkbox" class="uppercase option" name="upperCase" checked>
+                        <span>UPPERCASE (A - Z)</span>
+                    </label>
+                    <label for="en-low">
+                        <input type="checkbox" class="lowercase option" name="lowerCase" checked>
+                        <span>LOWERCASE (a - z)</span>
+                    </label>
+                    <label for="num">
+                        <input type="checkbox" class="number option" name="numbers">
+                        <span>NUMBERS (0 - 9)</span>
+                    </label>
+                    <label for="sym">
+                        <input type="checkbox" class="symbol option" name="symbols">
+                        <span>SYMBOLS (!@#$%^&*)</span>
+                    </label>
+                    <label for="dupli">
+                        <input type="checkbox" class="duplicate option" name="duplicate">
+                        <span>EXCLUDE DUPLICATE</span>
+                    </label>
+                    <label for="spa">
+                        <input type="checkbox" class="space option" name="space">
+                        <span>INCLUDE SPACES</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,158 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: aqua;
+}
+
+.title{
+    text-align: center;
+    margin-top: 8rem;
+    font-size: 3rem;
+    color: #292929;
+}
+
+.container{
+    background-color: white;
+    width: 50rem;
+    padding: 1rem;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.pass-gener-input{
+    color: black;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: none;
+    outline-color: lightgray;
+    font-size: 36px;
+    letter-spacing: 1.4px;
+    background-color: #efefef;
+}
+
+.pass-indicator{
+    width: 100%;
+    height: 4px;
+    background-color: #efefef;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+    position: relative;
+}
+
+.pass-indicator::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: yellow;
+    border-radius: inherit;
+    transition: width 0.3s ease;
+}
+
+.pass-indicator#weak::before{
+    width: 20%;
+    background: red;
+}
+
+.pass-indicator#medium::before{
+    width: 50%;
+    background: yellow;
+}
+
+.pass-indicator#strong::before{
+    width: 100%;
+    background: blue;
+}
+
+.pass-gener-btns{
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-radius: 25px;
+}
+
+.btn{
+    display: flex;
+    width: 50%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 15px;
+    justify-content: center;
+    color: white;
+}
+
+.svg{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.4rem;
+}
+
+.check-icon{
+    display: none;
+}
+
+.pass-gener-copy{
+    background-color: darkblue;
+}
+
+.pass-gener-regenerate{
+    background-color: blue;
+}
+
+.pass-gener-set{
+    width: 100%;
+    background-color: #efefef;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.pass-gener-char{
+    margin-bottom: 1.5rem;
+}
+
+.char{
+    display: flex;
+    flex-direction: column;
+}
+
+.char span{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+.input{
+    appearance: none;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+}
+
+.pass-checkbox{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+}
+
+.pass-setting h2{
+    margin-bottom: 0.5rem;
+}
+
+.lowercase{
+    pointer-events: none;
+    opacity: 0.7;
+}
